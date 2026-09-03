@@ -43,9 +43,7 @@ string infixToPrefix(string infix) {
                 st.pop();
         }
         else if (isOperator(c)) {
-            while (!st.empty() &&
-                   st.top() != '(' &&
-                   precedence(st.top()) > precedence(c)) {
+            while (!st.empty() && st.top() != '(' && (precedence(st.top()) > precedence(c) ||(precedence(st.top()) == precedence(c) && c == '^'))) {
                 postfix += st.top();
                 st.pop();
             }
