@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
 
 int reverseNumber(int number, int reversed = 0) {
